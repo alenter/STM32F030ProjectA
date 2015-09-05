@@ -35,8 +35,6 @@
 /* Private variables ---------------------------------------------------------*/
 //osThreadId LEDThread1Handle, LEDThread2Handle;
 /* Private function prototypes -----------------------------------------------*/
-//static void LED_Thread1(void const *argument);
-//static void LED_Thread2(void const *argument);
 void SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -65,14 +63,9 @@ int main(void)
   /* Thread 1 definition */
   //osThreadDef(THREAD_1, LED_Thread1, osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
   
-  /*  Thread 2 definition */
-  //osThreadDef(THREAD_2, LED_Thread2, osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
   
   /* Start thread 1 */
   //LEDThread1Handle = osThreadCreate(osThread(THREAD_1), NULL);
-
-  /* Start thread 2 */
-  //LEDThread2Handle = osThreadCreate(osThread(THREAD_2), NULL);  
 
   /* Start scheduler */
   osKernelStart();
